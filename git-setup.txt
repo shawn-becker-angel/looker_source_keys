@@ -1,0 +1,25 @@
+open github home repositories page:
+https://github.com/shawn-becker-angel?tab=repositories
+login using github account and password
+click "New" button
+enter Repository name: <repository-name>
+copy <remote-repository-url>
+cd ~/workspace && mkdir <repository-name> && cd <repository-name>
+python3 -m venv ./venv
+
+mkdir -p src/package/subpackage
+touch src/package/__init__.py
+touch suc/package/subpackage1/__init__.py
+touch src/package/subpackage1/module_a.py
+mkdir tests
+touch tests/test_subpackage1.py
+touch Dockerfile
+touch requirements.txt
+
+git init -b master
+git add .
+git commit -m "first commit"
+git remote add origin <remote-repository-url>
+git remote -v
+git push -u origin master
+
